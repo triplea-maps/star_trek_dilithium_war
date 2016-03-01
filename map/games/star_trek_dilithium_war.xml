@@ -2399,8 +2399,8 @@
             <option name="transportCapacity" value="1"/>
         </attatchment>
         <attatchment name="unitAttatchment" attatchTo="Borg-Drone" javaClass="games.strategy.triplea.attatchments.UnitAttachment" type="unitType">
-            <option name="attack" value="5"/>
-            <option name="defense" value="5"/>
+            <option name="attack" value="7"/>
+            <option name="defense" value="7"/>
             <option name="movement" value="1"/>
             <option name="transportCost" value="1"/>
         </attatchment>
@@ -6878,11 +6878,9 @@
             <option name="conditions" value="conditionAttachment-Federation-Strike-Fleet"/>
             <option name="when" value="before:FederationCombatMove"/>
             <option name="removeUnits" value="all:Request-Strike-Force" count="1"/>
-            <option name="placement" value="Federation Space:Flagship" count="1"/>
-            <option name="placement" value="Federation Space:Heavy-Cruiser" count="2"/>
-            <option name="placement" value="Federation Space:Light-Cruiser" count="3"/>
-            <option name="placement" value="Federation Space:Escort-Cruiser" count="4"/>
-            <option name="placement" value="Federation Space:Scout-Ship" count="5"/>
+            <option name="placement" value="Federation Space:Light-Cruiser" count="4"/>
+            <option name="placement" value="Federation Space:Escort-Cruiser" count="5"/>
+            <option name="placement" value="Federation Space:Scout-Ship" count="6"/>
         </attatchment>
         
         <attatchment name="conditionAttachment-Dominion-Strike-Fleet" attatchTo="Dominion" javaClass="games.strategy.triplea.attatchments.RulesAttachment" type="player">
@@ -6893,11 +6891,9 @@
             <option name="conditions" value="conditionAttachment-Dominion-Strike-Fleet"/>
             <option name="when" value="before:DominionCombatMove"/>
             <option name="removeUnits" value="all:Request-Strike-Force" count="1"/>
-            <option name="placement" value="Dominion Space:Flagship" count="1"/>
-            <option name="placement" value="Dominion Space:Heavy-Cruiser" count="2"/>
-            <option name="placement" value="Dominion Space:Light-Cruiser" count="3"/>
-            <option name="placement" value="Dominion Space:Escort-Cruiser" count="4"/>
-            <option name="placement" value="Dominion Space:Scout-Ship" count="5"/>
+            <option name="placement" value="Dominion Space:Light-Cruiser" count="4"/>
+            <option name="placement" value="Dominion Space:Escort-Cruiser" count="5"/>
+            <option name="placement" value="Dominion Space:Scout-Ship" count="6"/>
         </attatchment>
         
         <attatchment name="conditionAttachment-Vulcan-Strike-Fleet" attatchTo="Vulcans" javaClass="games.strategy.triplea.attatchments.RulesAttachment" type="player">
@@ -6908,11 +6904,9 @@
             <option name="conditions" value="conditionAttachment-Vulcan-Strike-Fleet"/>
             <option name="when" value="before:VulcansCombatMove"/>
             <option name="removeUnits" value="all:Request-Strike-Force" count="1"/>
-            <option name="placement" value="Vulcan Space:Flagship" count="1"/>
-            <option name="placement" value="Vulcan Space:Heavy-Cruiser" count="2"/>
-            <option name="placement" value="Vulcan Space:Light-Cruiser" count="3"/>
-            <option name="placement" value="Vulcan Space:Escort-Cruiser" count="4"/>
-            <option name="placement" value="Vulcan Space:Scout-Ship" count="5"/>
+            <option name="placement" value="Vulcan Space:Light-Cruiser" count="4"/>
+            <option name="placement" value="Vulcan Space:Escort-Cruiser" count="5"/>
+            <option name="placement" value="Vulcan Space:Scout-Ship" count="6"/>
         </attatchment>
         
         <attatchment name="conditionAttachment-Romulan-Strike-Fleet" attatchTo="Romulans" javaClass="games.strategy.triplea.attatchments.RulesAttachment" type="player">
@@ -6923,11 +6917,9 @@
             <option name="conditions" value="conditionAttachment-Romulan-Strike-Fleet"/>
             <option name="when" value="before:RomulansCombatMove"/>
             <option name="removeUnits" value="all:Request-Strike-Force" count="1"/>
-            <option name="placement" value="Romulan Space:Flagship" count="1"/>
-            <option name="placement" value="Romulan Space:Heavy-Cruiser" count="2"/>
-            <option name="placement" value="Romulan Space:Light-Cruiser" count="3"/>
-            <option name="placement" value="Romulan Space:Escort-Cruiser" count="4"/>
-            <option name="placement" value="Romulan Space:Scout-Ship" count="5"/>
+            <option name="placement" value="Romulan Space:Light-Cruiser" count="4"/>
+            <option name="placement" value="Romulan Space:Escort-Cruiser" count="5"/>
+            <option name="placement" value="Romulan Space:Scout-Ship" count="6"/>
         </attatchment>
         
         <attatchment name="conditionAttachment-Klingon-Strike-Fleet" attatchTo="Klingons" javaClass="games.strategy.triplea.attatchments.RulesAttachment" type="player">
@@ -6938,13 +6930,11 @@
             <option name="conditions" value="conditionAttachment-Klingon-Strike-Fleet"/>
             <option name="when" value="before:KlingonsCombatMove"/>
             <option name="removeUnits" value="all:Request-Strike-Force" count="1"/>
-            <option name="placement" value="Klingon Space:Flagship" count="1"/>
-            <option name="placement" value="Klingon Space:Heavy-Cruiser" count="2"/>
-            <option name="placement" value="Klingon Space:Light-Cruiser" count="3"/>
-            <option name="placement" value="Klingon Space:Escort-Cruiser" count="4"/>
-            <option name="placement" value="Klingon Space:Scout-Ship" count="5"/>
+            <option name="placement" value="Klingon Space:Light-Cruiser" count="4"/>
+            <option name="placement" value="Klingon Space:Escort-Cruiser" count="5"/>
+            <option name="placement" value="Klingon Space:Scout-Ship" count="6"/>
         </attatchment>
-        
+
         <attatchment name="conditionAttachment-Cardassian-Strike-Fleet" attatchTo="Cardassians" javaClass="games.strategy.triplea.attatchments.RulesAttachment" type="player">
             <option name="directPresenceTerritories" value="map" count="1"/>
             <option name="unitPresence" value="Request-Strike-Force" count="1"/>
@@ -6953,11 +6943,9 @@
             <option name="conditions" value="conditionAttachment-Cardassian-Strike-Fleet"/>
             <option name="when" value="before:CardassiansCombatMove"/>
             <option name="removeUnits" value="all:Request-Strike-Force" count="1"/>
-            <option name="placement" value="Cardassian Space:Flagship" count="1"/>
-            <option name="placement" value="Cardassian Space:Heavy-Cruiser" count="2"/>
-            <option name="placement" value="Cardassian Space:Light-Cruiser" count="3"/>
-            <option name="placement" value="Cardassian Space:Escort-Cruiser" count="4"/>
-            <option name="placement" value="Cardassian Space:Scout-Ship" count="5"/>
+            <option name="placement" value="Cardassian Space:Light-Cruiser" count="4"/>
+            <option name="placement" value="Cardassian Space:Escort-Cruiser" count="5"/>
+            <option name="placement" value="Cardassian Space:Scout-Ship" count="6"/>
         </attatchment>
 <!-- End of Request Strike Fleet triggers -->
 
@@ -9117,7 +9105,7 @@
 <br>
 <center><img src="Communication.png"/></center>
 <br><span style="font-size:12px;color:E88E0A;">Request-Strike-Force</span>
-<br><span style="font-size:12px;color:E6E08E;">This communication delivers a fleet of vessels. A force of 5 Scout-Ships, 4 Escort-Cruisers, 3 Light-Cruisers, 2 Heavy-Cruisers and 1 Flagship will reach the main space station after 1 round.</span><br>
+<br><span style="font-size:12px;color:E6E08E;">This communication delivers a fleet of vessels. A force of 6 Scout-Ships, 5 Escort-Cruisers and 4 Light-Cruisers will reach the main space station after 1 round.</span><br>
 <br><span style="font-size:12px;color:E88E0A;">Seek-Promotion</span>
 <br><span style="font-size:12px;color:E6E08E;">This communication gives the commander a 50 % chance of advancing to next naval rank. If the promotion is declined, then the next request for promotion is given a 60 % chance of success. If however the promotion is granted, the next request for promotion is only given a 40 % chance of success.</span><br>
 <br><span style="font-size:12px;color:E88E0A;">Diplomatic-Ceasefire</span>
