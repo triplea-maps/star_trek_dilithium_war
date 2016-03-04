@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-  <info name="Star Trek: Dilithium War" version="0.2.3"/>
+  <info name="Star Trek: Dilithium War" version="0.2.4"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
   <triplea minimumVersion="1.8.0.9"/>
   <diceSides value="10"/>
@@ -8384,18 +8384,6 @@
         <attatchment name="conditionAttachmentPlanetValueAddedRemoved" attatchTo="AI" javaClass="games.strategy.triplea.attatchments.RulesAttachment" type="player">
             <option name="turns" value="1-+"/>
         </attatchment>
-        <attatchment name="triggerAttachment_Planet_PU_value_added" attatchTo="AI" javaClass="games.strategy.triplea.attatchments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentPlanetValueAddedRemoved"/>
-            <option name="when" value="after:FederationEndTurn"/>
-            <option name="when" value="after:DominionEndTurn"/>
-            <option name="when" value="after:VulcansEndTurn"/>
-            <option name="when" value="after:RomulansEndTurne"/>
-            <option name="when" value="after:KlingonsEndTurn"/>
-            <option name="when" value="after:CardassiansEndTurn"/>
-            <option name="when" value="after:BorgEndTurn"/>
-            <option name="territories" value="Planet Radan:Vulcan Outpost:Dominion Outpost:Federation Outpost:Klingon Outpost:Cardassian Outpost:Romulan Outpost:Planet 01:Planet 02:Planet 03:Planet 04:Planet 05:Planet 06:Planet 07:Planet 08:Planet 09:Planet 10:Planet 11:Planet 12:Planet 13:Planet 14:Planet 15:Planet 16:Planet 17:Planet 18:Planet 19:Planet 20:Planet 21:Planet 22:Planet 23:Planet 24:Planet 25:Planet 26:Planet 27:Planet 28:Planet 29:Planet 30:Planet 31:Planet 32:Planet 33:Planet 34:Planet 35:Planet 36:Planet 37:Planet 38:Planet 39:Planet 40:Planet 41:Planet 42:Planet 43:Planet 44:Planet 45:Planet 46:Planet 47:Planet 48"/>
-            <option name="territoryProperty" value="production" count="10"/>
-        </attatchment>
         <attatchment name="triggerAttachment_Planet_PU_value_removed" attatchTo="AI" javaClass="games.strategy.triplea.attatchments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentPlanetValueAddedRemoved"/>
             <option name="when" value="before:FederationEndTurn"/>
@@ -8407,6 +8395,18 @@
             <option name="when" value="before:BorgEndTurn"/>
             <option name="territories" value="Planet Radan:Vulcan Outpost:Dominion Outpost:Federation Outpost:Klingon Outpost:Cardassian Outpost:Romulan Outpost:Planet 01:Planet 02:Planet 03:Planet 04:Planet 05:Planet 06:Planet 07:Planet 08:Planet 09:Planet 10:Planet 11:Planet 12:Planet 13:Planet 14:Planet 15:Planet 16:Planet 17:Planet 18:Planet 19:Planet 20:Planet 21:Planet 22:Planet 23:Planet 24:Planet 25:Planet 26:Planet 27:Planet 28:Planet 29:Planet 30:Planet 31:Planet 32:Planet 33:Planet 34:Planet 35:Planet 36:Planet 37:Planet 38:Planet 39:Planet 40:Planet 41:Planet 42:Planet 43:Planet 44:Planet 45:Planet 46:Planet 47:Planet 48"/>
             <option name="territoryProperty" value="production" count="0"/>
+        </attatchment>
+        <attatchment name="triggerAttachment_Planet_PU_value_added" attatchTo="AI" javaClass="games.strategy.triplea.attatchments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentPlanetValueAddedRemoved"/>
+            <option name="when" value="after:FederationEndTurn"/>
+            <option name="when" value="after:DominionEndTurn"/>
+            <option name="when" value="after:VulcansEndTurn"/>
+            <option name="when" value="after:RomulansEndTurn"/>
+            <option name="when" value="after:KlingonsEndTurn"/>
+            <option name="when" value="after:CardassiansEndTurn"/>
+            <option name="when" value="after:BorgEndTurn"/>
+            <option name="territories" value="Planet Radan:Vulcan Outpost:Dominion Outpost:Federation Outpost:Klingon Outpost:Cardassian Outpost:Romulan Outpost:Planet 01:Planet 02:Planet 03:Planet 04:Planet 05:Planet 06:Planet 07:Planet 08:Planet 09:Planet 10:Planet 11:Planet 12:Planet 13:Planet 14:Planet 15:Planet 16:Planet 17:Planet 18:Planet 19:Planet 20:Planet 21:Planet 22:Planet 23:Planet 24:Planet 25:Planet 26:Planet 27:Planet 28:Planet 29:Planet 30:Planet 31:Planet 32:Planet 33:Planet 34:Planet 35:Planet 36:Planet 37:Planet 38:Planet 39:Planet 40:Planet 41:Planet 42:Planet 43:Planet 44:Planet 45:Planet 46:Planet 47:Planet 48"/>
+            <option name="territoryProperty" value="production" count="10"/>
         </attatchment>
 <!-- End Every Planet XX, Planet Radan and Outpost territory get there PU value set to 0. The territories only have a PU value in the beginning of the game to motivate the AI to try to capture the territories. -->
 
