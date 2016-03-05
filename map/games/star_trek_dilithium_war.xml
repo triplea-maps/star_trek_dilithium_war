@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-  <info name="Star Trek: Dilithium War" version="0.2.4"/>
+  <info name="Star Trek: Dilithium War" version="0.2.5"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
   <triplea minimumVersion="1.8.0.9"/>
   <diceSides value="10"/>
@@ -4024,7 +4024,7 @@
         <attatchment name="conditionAttachmentAllAIresourcesRemoved" attatchTo="AI" javaClass="games.strategy.triplea.attatchments.RulesAttachment" type="player">
             <option name="turns" value="1-+"/>
         </attatchment>
-        <attatchment name="triggerAttachment_All_AI_Engineering_removed" attatchTo="AI" javaClass="games.strategy.triplea.attatchments.TriggerAttachment" type="player">
+        <attatchment name="triggerAttachment_All_AI_Command_removed" attatchTo="AI" javaClass="games.strategy.triplea.attatchments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentAllAIresourcesRemoved"/>
             <option name="resource" value="Command"/>
             <option name="resourceCount" value="-1000"/>
@@ -4063,12 +4063,6 @@
         <attatchment name="triggerAttachment_All_Borg_Engineering_removed" attatchTo="Borg" javaClass="games.strategy.triplea.attatchments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentAllBorgresourcesRemoved"/>
             <option name="resource" value="Engineering"/>
-            <option name="resourceCount" value="-1000"/>
-            <option name="when" value="after:BorgEndTurn"/>
-        </attatchment>
-        <attatchment name="triggerAttachment_All_Borg_PUs_removed" attatchTo="Borg" javaClass="games.strategy.triplea.attatchments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentAllBorgresourcesRemoved"/>
-            <option name="resource" value="PUs"/>
             <option name="resourceCount" value="-1000"/>
             <option name="when" value="after:BorgEndTurn"/>
         </attatchment>
