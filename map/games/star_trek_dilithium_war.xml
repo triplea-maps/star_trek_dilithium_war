@@ -3,7 +3,7 @@
 <game>
   <info name="Star Trek: Dilithium War" version="0.2.7"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
-  <triplea minimumVersion="1.8.0.9"/>
+  <triplea minimumVersion="1.9"/>
   <diceSides value="10"/>
       <map>
           <territory name="Galaxy" water="true"/>
