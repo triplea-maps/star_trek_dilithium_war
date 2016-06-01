@@ -12,7 +12,6 @@ Red-Wormhole-2.png (3736,2950)
 Green-Wormhole-1.png (2539,3638)
 Green-Wormhole-2.png (3337,2262)
 
-
 LCARS-TopLeft.png (0,0)
 LCARS-TopRight.png (5100,0)
 LCARS-BotLeft.png (0,5568)
