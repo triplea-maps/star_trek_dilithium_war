@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-  <info name="Star Trek: Dilithium War" version="0.2.5"/>
+  <info name="Star Trek: Dilithium War" version="0.2.7"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
   <triplea minimumVersion="1.8.0.9"/>
   <diceSides value="10"/>
@@ -1126,6 +1126,8 @@
                       </step>
                 <step name="BorgBattle" delegate="battle" player="Borg" display="Combat"/>
 		<step name="BorgNonCombatMove" delegate="move" player="Borg" display="Non Combat Move"/>
+                <step name="BorgTech" delegate="tech" player="Borg" display="Acquire Technology"/>
+                <step name="BorgTechActivation" delegate="tech_activation" player="Borg" display="Implement Technology"/>
                 <step name="BorgPurchase" delegate="reinforce" player="Borg" display="Call Reinforcements"/>
                 <step name="BorgPlace" delegate="place" player="Borg" display="Place Reinforcements"/>
                 <step name="BorgEndTurn" delegate="endTurn" player="Borg" display="Turn Complete"/>
@@ -1740,6 +1742,17 @@
                 <techname name="Cloaking-Device-For-New-Flagships"/>
                 <techname name="Security-Force-Assault-Phasers"/>
                 <techname name="Security-Force-Personal-Shields"/>
+                <techname name="Probe-Warp-Upgrade"/>
+                <techname name="Probe-Bombardment-Ability"/>
+                <techname name="Sphere-Defensive-Weapons-Upgrade"/>
+                <techname name="Sphere-Bombardment-Ability"/>
+                <techname name="Cube-Offensive-Weapons-Upgrade"/>
+                <techname name="Cube-Bombardment-Ability"/>
+                <techname name="Tactical-Cube-All-Weapons-Upgrade"/>
+                <techname name="Tactical-Cube-Bombardment-Ability"/>
+                <techname name="Tactical-Cube-Warp-Upgrade"/>
+                <techname name="Drone-Assimilation-Accelerator"/>
+                <techname name="Drone-Defense-Shield-Adaptor"/>
         </technologies>
 
         <playerTech player="Federation">
@@ -1892,6 +1905,21 @@
                 <tech name="Security-Force-Personal-Shields"/>
             </category>
         </playerTech>
+        <playerTech player="Borg">
+            <category name="Borg Technology">
+                <tech name="Probe-Warp-Upgrade"/>
+                <tech name="Probe-Bombardment-Ability"/>
+                <tech name="Sphere-Defensive-Weapons-Upgrade"/>
+                <tech name="Sphere-Bombardment-Ability"/>
+                <tech name="Cube-Offensive-Weapons-Upgrade"/>
+                <tech name="Cube-Bombardment-Ability"/>
+                <tech name="Tactical-Cube-All-Weapons-Upgrade"/>
+                <tech name="Tactical-Cube-Bombardment-Ability"/>
+                <tech name="Tactical-Cube-Warp-Upgrade"/>
+                <tech name="Drone-Assimilation-Accelerator"/>
+                <tech name="Drone-Defense-Shield-Adaptor"/>
+            </category>
+        </playerTech>
     </technology>
 
 <!-- Relationships -->
@@ -1944,7 +1972,7 @@
             <option name="techCost" value="10"/>
         </attachment>
         <attachment name="techAttachment" attachTo="Borg" javaClass="games.strategy.triplea.attachments.TechAttachment" type="player">
-            <option name="techCost" value="10"/>
+            <option name="techCost" value="20"/>
         </attachment>
 
 <!-- RulesAttachments -->
@@ -2283,9 +2311,9 @@
             <option name="constructionType" value="Space Station"/>
             <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
             <option name="maxConstructionsPerTypePerTerr" value="1"/>
-            <option name="destroyedWhenCapturedFrom" value="Borg"/>
             <option name="createsResourcesList" value="2:Assimilation"/>
             <option name="repairsUnits" value="Borg-Tactical-Cube:Borg-Cube:Borg-Sphere:Borg-Probe"/>
+            <option name="whenCapturedChangesInto" value="Borg:any:true:CU-Space-Station:1"/>
         </attachment>
         <attachment name="unitAttachment" attachTo="Assimilated-DSS" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
             <option name="isInfrastructure" value="true"/>
@@ -2295,9 +2323,9 @@
             <option name="constructionType" value="Space Station"/>
             <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
             <option name="maxConstructionsPerTypePerTerr" value="1"/>
-            <option name="destroyedWhenCapturedFrom" value="Borg"/>
             <option name="createsResourcesList" value="2:Assimilation"/>
             <option name="repairsUnits" value="Borg-Tactical-Cube:Borg-Cube:Borg-Sphere:Borg-Probe"/>
+            <option name="whenCapturedChangesInto" value="Borg:any:true:D-Space-Station:1"/>
         </attachment>
         <attachment name="unitAttachment" attachTo="Assimilated-KESS" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
             <option name="isInfrastructure" value="true"/>
@@ -2307,9 +2335,9 @@
             <option name="constructionType" value="Space Station"/>
             <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
             <option name="maxConstructionsPerTypePerTerr" value="1"/>
-            <option name="destroyedWhenCapturedFrom" value="Borg"/>
             <option name="createsResourcesList" value="2:Assimilation"/>
             <option name="repairsUnits" value="Borg-Tactical-Cube:Borg-Cube:Borg-Sphere:Borg-Probe"/>
+            <option name="whenCapturedChangesInto" value="Borg:any:true:KE-Space-Station:1"/>
         </attachment>
         <attachment name="unitAttachment" attachTo="Assimilated-RSESS" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
             <option name="isInfrastructure" value="true"/>
@@ -2319,9 +2347,9 @@
             <option name="constructionType" value="Space Station"/>
             <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
             <option name="maxConstructionsPerTypePerTerr" value="1"/>
-            <option name="destroyedWhenCapturedFrom" value="Borg"/>
             <option name="createsResourcesList" value="2:Assimilation"/>
             <option name="repairsUnits" value="Borg-Tactical-Cube:Borg-Cube:Borg-Sphere:Borg-Probe"/>
+            <option name="whenCapturedChangesInto" value="Borg:any:true:RSE-Space-Station:1"/>
         </attachment>
         <attachment name="unitAttachment" attachTo="Assimilated-UFPSS" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
             <option name="isInfrastructure" value="true"/>
@@ -2331,9 +2359,9 @@
             <option name="constructionType" value="Space Station"/>
             <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
             <option name="maxConstructionsPerTypePerTerr" value="1"/>
-            <option name="destroyedWhenCapturedFrom" value="Borg"/>
             <option name="createsResourcesList" value="2:Assimilation"/>
             <option name="repairsUnits" value="Borg-Tactical-Cube:Borg-Cube:Borg-Sphere:Borg-Probe"/>
+            <option name="whenCapturedChangesInto" value="Borg:any:true:UFP-Space-Station:1"/>
         </attachment>
         <attachment name="unitAttachment" attachTo="Assimilated-VHCSS" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
             <option name="isInfrastructure" value="true"/>
@@ -2343,9 +2371,9 @@
             <option name="constructionType" value="Space Station"/>
             <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
             <option name="maxConstructionsPerTypePerTerr" value="1"/>
-            <option name="destroyedWhenCapturedFrom" value="Borg"/>
             <option name="createsResourcesList" value="2:Assimilation"/>
             <option name="repairsUnits" value="Borg-Tactical-Cube:Borg-Cube:Borg-Sphere:Borg-Probe"/>
+            <option name="whenCapturedChangesInto" value="Borg:any:true:VHC-Space-Station:1"/>
         </attachment>
 
         <attachment name="unitAttachment" attachTo="Borg-Complex" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
@@ -2364,36 +2392,34 @@
 
         <attachment name="unitAttachment" attachTo="Borg-Tactical-Cube" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
             <option name="attack" value="8"/>
-            <option name="defense" value="6"/>
+            <option name="defense" value="8"/>
             <option name="movement" value="1"/>
-            <option name="canBombard" value="true"/>
+            <option name="canBombard" value="false"/>
             <option name="isSea" value="true"/>
             <option name="hitPoints" value="2"/>
             <option name="transportCapacity" value="4"/>
         </attachment>
         <attachment name="unitAttachment" attachTo="Borg-Cube" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
             <option name="attack" value="7"/>
-            <option name="defense" value="5"/>
+            <option name="defense" value="6"/>
             <option name="movement" value="2"/>
-            <option name="canBombard" value="true"/>
+            <option name="canBombard" value="false"/>
             <option name="isSea" value="true"/>
             <option name="hitPoints" value="2"/>
             <option name="transportCapacity" value="3"/>
         </attachment>
         <attachment name="unitAttachment" attachTo="Borg-Sphere" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
-            <option name="attack" value="4"/>
+            <option name="attack" value="5"/>
             <option name="defense" value="6"/>
-            <option name="movement" value="3"/>
-            <option name="canBombard" value="true"/>
+            <option name="movement" value="2"/>
             <option name="isSea" value="true"/>
             <option name="hitPoints" value="2"/>
             <option name="transportCapacity" value="2"/>
         </attachment>
         <attachment name="unitAttachment" attachTo="Borg-Probe" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
-            <option name="attack" value="3"/>
-            <option name="defense" value="3"/>
-            <option name="movement" value="4"/>
-            <option name="canBombard" value="true"/>
+            <option name="attack" value="4"/>
+            <option name="defense" value="4"/>
+            <option name="movement" value="3"/>
             <option name="isSea" value="true"/>
             <option name="hitPoints" value="2"/>
             <option name="transportCapacity" value="1"/>
@@ -8405,6 +8431,41 @@
 <!-- End Every Planet XX, Planet Radan and Outpost territory get there PU value set to 0. The territories only have a PU value in the beginning of the game to motivate the AI to try to capture the territories. -->
 
 <!-- Tech Ability Attachments -->
+        <attachment name="techAbilityAttachment" attachTo="Probe-Warp-Upgrade" javaClass="games.strategy.triplea.attachments.TechAbilityAttachment" type="technology">
+            <option name="movementBonus" value="1:Borg-Probe"/>
+        </attachment>
+        <attachment name="techAbilityAttachment" attachTo="Tactical-Cube-Warp-Upgrade" javaClass="games.strategy.triplea.attachments.TechAbilityAttachment" type="technology">
+            <option name="movementBonus" value="1:Borg-Tactical-Cube"/>
+        </attachment>
+        <attachment name="techAbilityAttachment" attachTo="Sphere-Defensive-Weapons-Upgrade" javaClass="games.strategy.triplea.attachments.TechAbilityAttachment" type="technology">
+            <option name="defenseBonus" value="1:Borg-Sphere"/>
+        </attachment>
+        <attachment name="techAbilityAttachment" attachTo="Cube-Offensive-Weapons-Upgrade" javaClass="games.strategy.triplea.attachments.TechAbilityAttachment" type="technology">
+            <option name="attackBonus" value="1:Borg-Cube"/>
+        </attachment>
+        <attachment name="techAbilityAttachment" attachTo="Tactical-Cube-All-Weapons-Upgrade" javaClass="games.strategy.triplea.attachments.TechAbilityAttachment" type="technology">
+            <option name="defenseBonus" value="1:Borg-Tactical-Cube"/>
+            <option name="attackBonus" value="1:Borg-Tactical-Cube"/>
+        </attachment>
+        <attachment name="techAbilityAttachment" attachTo="Drone-Assimilation-Accelerator" javaClass="games.strategy.triplea.attachments.TechAbilityAttachment" type="technology">
+            <option name="attackBonus" value="1:Borg-Drone"/>
+        </attachment>
+        <attachment name="techAbilityAttachment" attachTo="Drone-Defense-Shield-Adaptor" javaClass="games.strategy.triplea.attachments.TechAbilityAttachment" type="technology">
+            <option name="defenseBonus" value="1:Borg-Drone"/>
+        </attachment>
+        <attachment name="techAbilityAttachment" attachTo="Tactical-Cube-Bombardment-Ability" javaClass="games.strategy.triplea.attachments.TechAbilityAttachment" type="technology">
+            <option name="unitAbilitiesGained" value="Borg-Tactical-Cube:canBombard"/>
+        </attachment>
+        <attachment name="techAbilityAttachment" attachTo="Cube-Bombardment-Ability" javaClass="games.strategy.triplea.attachments.TechAbilityAttachment" type="technology">
+            <option name="unitAbilitiesGained" value="Borg-Cube:canBombard"/>
+        </attachment>
+        <attachment name="techAbilityAttachment" attachTo="Sphere-Bombardment-Ability" javaClass="games.strategy.triplea.attachments.TechAbilityAttachment" type="technology">
+            <option name="unitAbilitiesGained" value="Borg-Sphere:canBombard"/>
+        </attachment>
+        <attachment name="techAbilityAttachment" attachTo="Probe-Bombardment-Ability" javaClass="games.strategy.triplea.attachments.TechAbilityAttachment" type="technology">
+            <option name="unitAbilitiesGained" value="Borg-Probe:canBombard"/>
+        </attachment>
+
         <attachment name="techAbilityAttachment" attachTo="Scout-Ship-Warp-Upgrade" javaClass="games.strategy.triplea.attachments.TechAbilityAttachment" type="technology">
             <option name="movementBonus" value="1:Scout-Ship"/>
             <option name="movementBonus" value="1:Scout-Ship-C"/>
