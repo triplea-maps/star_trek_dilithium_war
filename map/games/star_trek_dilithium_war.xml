@@ -4025,7 +4025,7 @@
 
 <!-- Start The map Prologue and PleaseWait popup -->
         <attachment name="conditionAttachmentPrologue" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="1"/>
+            <option name="rounds" value="1"/>
         </attachment>
         <attachment name="triggerAttachmentMap_Prologue" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentPrologue"/>
@@ -4035,7 +4035,7 @@
             <option name="uses" value="1"/>
         </attachment>
         <attachment name="conditionAttachmentPleaseWait" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="1"/>
+            <option name="rounds" value="1"/>
         </attachment>
         <attachment name="triggerAttachmentMap_PleaseWait" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentPleaseWait"/>
@@ -4048,7 +4048,7 @@
 
 <!-- Start AI has its resources removed every turn -->
         <attachment name="conditionAttachmentAllAIresourcesRemoved" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="1-+"/>
+            <option name="rounds" value="1-+"/>
         </attachment>
         <attachment name="triggerAttachment_All_AI_Command_removed" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentAllAIresourcesRemoved"/>
@@ -4078,7 +4078,7 @@
 
 <!-- Start Borg has its resources removed every turn -->
         <attachment name="conditionAttachmentAllBorgresourcesRemoved" attachTo="Borg" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="1-+"/>
+            <option name="rounds" value="1-+"/>
         </attachment>
         <attachment name="triggerAttachment_All_Borg_Command_removed" attachTo="Borg" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentAllBorgresourcesRemoved"/>
@@ -8359,7 +8359,7 @@
 
 <!-- Start of The Borg enters the game -->
         <attachment name="conditionAttachmentBorgArrive" attachTo="Borg" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="1"/>
+            <option name="rounds" value="1"/>
         </attachment>
         <attachment name="triggerAttachment_The_Borg_take_control_of_planet_Radan" attachTo="Borg" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentBorgArrive"/>
@@ -8402,7 +8402,7 @@
 
 <!-- Start Every Planet XX, Planet Radan and Outpost territory get there PU value set to 0. The territories only have a PU value in the beginning of the game to motivate the AI to try to capture the territories. -->
         <attachment name="conditionAttachmentPlanetValueAddedRemoved" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="1-+"/>
+            <option name="rounds" value="1-+"/>
         </attachment>
         <attachment name="triggerAttachment_Planet_PU_value_removed" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentPlanetValueAddedRemoved"/>
@@ -9010,10 +9010,10 @@
             <boolean/>
         </property>
         
-        <property name="Units repair at beginning of round" value="true" editable="false">
+        <property name="Units Repair Hits Start Turn" value="true" editable="false">
             <boolean/>
         </property>
-        <property name="Units repair at end of round" value="false" editable="false">
+        <property name="Units Repair Hits End Turn" value="false" editable="false">
             <boolean/>
         </property>
         <property name="Two HitPoint Units Require Repair Facilities" value="true" editable="false">
