@@ -1,0 +1,18 @@
+Vulcans_large.png (5721,3059)
+Dominion_large.png (4328,644)
+Federation_large.png (1541,649)
+Klingons_large.png (1549,5470)
+Cardassians_large.png (149,3059)
+Romulans_large.png (4328,5477)
+
+Blue-Wormhole-1.png (2539,2262)
+Blue-Wormhole-2.png (3337,3638)
+Red-Wormhole-1.png (2140,2950)
+Red-Wormhole-2.png (3736,2950)
+Green-Wormhole-1.png (2539,3638)
+Green-Wormhole-2.png (3337,2262)
+
+LCARS-TopLeft.png (0,0)
+LCARS-TopRight.png (5100,0)
+LCARS-BotLeft.png (0,5568)
+LCARS-BotRight.png (5100,5569)  

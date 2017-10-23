@@ -1,0 +1,6 @@
+Vulcan Outpost (5721,3059)
+Dominion Outpost (4328,644)
+Federation Outpost (1541,649)
+Klingon Outpost (1549,5470)
+Cardassian Outpost (149,3059)
+Romulan Outpost (4328,5477)
