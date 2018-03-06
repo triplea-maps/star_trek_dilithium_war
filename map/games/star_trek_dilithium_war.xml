@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-  <info name="Star Trek: Dilithium War" version="1.0.1"/>
+  <info name="Star Trek: Dilithium War" version="1.0.2"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
   <triplea minimumVersion="1.9"/>
   <diceSides value="10"/>
@@ -888,7 +888,6 @@
         <resource name="Command"/>
         <resource name="Engineering"/>
         <resource name="PUs"/>
-        <resource name="Science"/>
         <resource name="Dilithium"/>
         <resource name="Assimilation"/>
     </resourceList>
@@ -1281,7 +1280,6 @@
         <productionRule name="buyScience">
             <cost resource="Dilithium" quantity="1"/>
             <result resourceOrUnit="PUs" quantity="15"/>
-            <result resourceOrUnit="Science" quantity="0"/>
         </productionRule>
 
 <!-- Borg -->
