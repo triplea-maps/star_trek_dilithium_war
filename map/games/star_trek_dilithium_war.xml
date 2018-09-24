@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-  <info name="Star Trek: Dilithium War" version="1.0.3"/>
+  <info name="Star Trek: Dilithium War" version="1.0.4"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
   <triplea minimumVersion="1.9"/>
   <diceSides value="10"/>
@@ -9100,7 +9100,7 @@
 <br>
 <center><img src="Bar1.png"/></center>
 <br><b><span style="font-size:14px;color:E88E0A;">Win Conditions:</span></b>
-<br><span style="font-size:12px;color:E6E08E;">An alliance must hold 5 of the 7 Victory Centers at the end of a round to win (The 7 Victory Centers being the 6 staring locations and the center planet of Radan).</span><br>
+<br><span style="font-size:12px;color:E6E08E;">An alliance must hold 5 of the 7 Victory Centers at the end of a round to win (The 7 Victory Centers being the 6 starting locations and the center planet of Radan).</span><br>
 <br>
 <center><img src="Bar2.png"/></center>
 <br><b><span style="font-size:14px;color:E88E0A;">Map Information:</span></b>
