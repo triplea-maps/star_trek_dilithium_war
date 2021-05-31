@@ -1,0 +1,3 @@
+map_name: star_trek_dilithium_war
+games:
+- {game_name: 'Star Trek: Dilithium War', file_name: star_trek_dilithium_war.xml}
